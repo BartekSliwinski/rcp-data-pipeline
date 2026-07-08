@@ -50,7 +50,6 @@ def main():
     step_start = time.perf_counter()
     worklogs_df = generate_worklogs(
         employees_df,
-        device_df,
         positions_df,
         departments_df
     )

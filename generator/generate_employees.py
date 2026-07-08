@@ -11,8 +11,9 @@ random.seed(config.SEED)
 Faker.seed(config.SEED)
 
 def get_hire_date():
-    start_date = datetime(2020,1,1)
-    end_date = datetime.strptime(config.START_DATE, "%Y-%m-%d")
+    start_date = datetime.strptime(config.HIRING_STARTING_DATE, "%Y-%m-%d")
+    end_date = datetime.strptime(config.SIMULATION_START_DATE, "%Y-%m-%d")
+
     days_between = (end_date - start_date).days
     random_num_of_days = random.randint(0, days_between)
     random_date = start_date + timedelta(days=random_num_of_days)
@@ -25,8 +26,14 @@ def get_status():
     else:
         return "Inactive"
     
-def get_modified_date():
-    return
+def get_modified_date(hire_date):
+    end_date = datetime.strptime(config.SIMULATION_END_DATE, "%Y-%m-%d")
+
+    days_between = (end_date - hire_date).days
+    random_num_of_days = random.randint(0, days_between)
+    random_date = hire_date + timedelta(days=random_num_of_days)
+
+    return random_date
 
 def generate_employees(positions_df):
     rows = []
@@ -36,7 +43,7 @@ def generate_employees(positions_df):
         position_id = random.choice(positions_df["PositionID"])
         hire_date = get_hire_date()
         status = get_status()
-        modified_date = pd.NA
+        modified_date = get_modified_date(hire_date)
         rows.append({
             "EmployeeID": employee_id,
             "FirstName": first_name,
@@ -54,5 +61,7 @@ if __name__ == "__main__":
     departments_df = generate_departments()
     positions_df = generate_positions(departments_df)
     df = generate_employees(positions_df)
+    df.sort_values(by=['ModifiedDate'], inplace=True)
+    df["WorkedFor"] = (df["ModifiedDate"] - df["HireDate"]).where(df['Status']=='Inactive',other=pd.NA)
     print(df)
     df.to_csv(f"{config.CSV_OUTPUT_DIRECTORY}/employees.csv", index=False)
