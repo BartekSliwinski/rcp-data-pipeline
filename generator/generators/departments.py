@@ -8,8 +8,3 @@ def generate_departments():
     })
 
     return df
-
-if __name__ == "__main__":
-    df = generate_departments()
-    print(df)
-    df.to_csv("output/departments.csv", index=False)

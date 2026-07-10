@@ -8,9 +8,3 @@ def generate_devices():
         "DeviceName": config.DEVICES,
     })
     return df
-
-
-if __name__ == "__main__":
-    device_df = generate_devices()
-    print(device_df)
-    device_df.to_csv(f"{config.CSV_OUTPUT_DIRECTORY}/devices.csv", index=False)
