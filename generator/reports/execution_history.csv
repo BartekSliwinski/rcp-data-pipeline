@@ -1,0 +1,4 @@
+Execution_Date,Employees,Simulation_Start,Simulation_End,Simulation_Years,Seed,Execution_Time,Memory_Usage_In_MB,Generated_Events_Count,Output_Size_In_MB
+2026-07-11 20:44:52,500,2025-01-01,2026-12-31,2,67,9.73,241.03,475121,23.02
+2026-07-11 20:45:23,500,2025-01-01,2026-12-31,2,67,9.82,239.68,475121,23.02
+2026-07-11 20:45:42,500,2025-01-01,2026-12-31,2,67,9.79,239.09,475121,23.02

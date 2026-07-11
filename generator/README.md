@@ -11,6 +11,7 @@ Program do generowania danych o pracownikach i zdarzeniach wejścia/wyjścia na 
 * [Ustawienia konfiguracji](#ustawienia-konfiguracji)
 * [Technologie i narzędzia](#technologie-i-narzędzia)
 * [Jak uruchomić](#jak-uruchomić)
+* [Możliwości rozwoju](#możliwości-rozwoju)
 
 ## O projekcie
 
@@ -18,7 +19,10 @@ Program ten powstał jako część większego projektu. Więcej o nim możesz pr
 
 Służy on do generowania realistycznych danych do systemów RCP. Jego wynikiem końcowym są pliki w formie **csv**, które mogą posłużyć do stworzenia bazy danych lub arkusza.
 <!-- aaa -->
-
+<!-- 
+Jest konfigurowalny
+Bierze pod uwagę weekendy i święta.
+-->
 ## Główne funkcje
 
 ## Generowane dane
@@ -83,3 +87,7 @@ Podążaj za podanymi poniżej krokami aby uruchomić generator na swojej maszyn
     ```bash
     python main.py
     ```
+
+
+## Możliwości rozwoju
+
