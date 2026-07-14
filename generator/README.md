@@ -1,28 +1,39 @@
-# Generator syntetycznych danych do sytemu Rejestracji Czasu Pracy
+# Generator syntetycznych danych do Systemu Rejestracji Czasu Pracy
 
-Program do generowania danych o pracownikach i zdarzeniach wejścia/wyjścia na początek i koniec ich dnia pracy. 
+Generator syntetycznych danych przeznaczony do tworzenia realistycznych zbiorów danych dla systemu Rejestracji Czasu Pracy (RCP). Program generuje informacje o strukturze organizacyjnej firmy, pracownikach oraz zdarzeniach związanych z rejestracją czasu pracy. Dzięki szerokim możliwościom konfiguracji pozwala dostosować charakterystykę wygenerowanych danych do różnych scenariuszy testowych. Dodatkowo umożliwia kontrolowane wstrzykiwanie błędów do danych, co pozwala symulować rzeczywiste problemy występujące w systemach RCP.
 
--- zdjęcie z bazy danych połączonych tabel--
 ## Spis treści
 
 * [O projekcie](#o-projekcie)
+* [Model danych](#model-danych)
 * [Główne funkcje](#główne-funkcje)
-* [Generowane dane](#generowane-dane)
+* [Generowane pliki CSV](#generowane-pliki-csv)
 * [Ustawienia konfiguracji](#ustawienia-konfiguracji)
 * [Technologie i narzędzia](#technologie-i-narzędzia)
 * [Jak uruchomić](#jak-uruchomić)
 * [Możliwości rozwoju](#możliwości-rozwoju)
 
 ## O projekcie
+System Rejestracji Czasu Pracy (RCP) to system służący do ewidencjonowania czasu pracy pracowników poprzez rejestrowanie zdarzeń wejścia i wyjścia z wykorzystaniem dedykowanych urządzeń. Zebrane dane są wykorzystywane między innymi do rozliczania czasu pracy, nadgodzin oraz obecności pracowników.
 
-Program ten powstał jako część większego projektu. Więcej o nim możesz przeczytać [tutaj](https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP).
+Generator został stworzony jako część większego projektu poświęconego transformacji danych pomiędzy systemami RCP. Więcej informacji o całym projekcie znajduje się w głównym repozytorium [Transformacja danych pomiędzy systemami RCP](https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP).
 
-Służy on do generowania realistycznych danych do systemów RCP. Jego wynikiem końcowym są pliki w formie **csv**, które mogą posłużyć do stworzenia bazy danych lub arkusza.
-<!-- aaa -->
-<!-- 
-Jest konfigurowalny
-Bierze pod uwagę weekendy i święta.
--->
+Program służy do generowania realistycznych danych testowych w postaci plików **CSV**, które mogą zostać wykorzystane jako źródło danych dla relacyjnej bazy danych, procesów ETL lub analiz.
+
+Generator tworzy spójny model organizacji obejmujący:
+- strukturę działów i stanowisk,
+- pracowników wraz z podstawowymi informacjami,
+- urządzenia rejestrujące,
+- zdarzenia wejść i wyjść pracowników.
+
+Podczas generowania danych uwzględniane są zależności pomiędzy encjami oraz kalendarz pracy, w tym weekendy i ustawowe dni wolne od pracy w Polsce. Zachowanie generatora może zostać dostosowane za pomocą pliku konfiguracyjnego, umożliwiającego między innymi zmianę liczby pracowników, zakresu symulacji czy parametrów generowania zdarzeń.
+
+Generator wykorzystuje ziarno losowości (seed), dzięki czemu możliwe jest wielokrotne odtworzenie identycznego zbioru danych.
+
+Projekt zawiera również moduł walidacji wygenerowanych danych oraz możliwość kontrolowanego wstrzykiwania błędów do zdarzeń, co pozwala symulować rzeczywiste problemy spotykane w systemach RCP.
+
+## Model danych
+
 ## Główne funkcje
 
 ## Generowane dane
