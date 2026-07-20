@@ -6,9 +6,9 @@ Projekt **RCP Data Pipeline** to demonstracyjny pipeline przetwarzania danych sy
 
 - [O projekcie](#o-projekcie)
 - [Założenia projektu](#założenia-projektu)
-- [Przepływ danych (architektura)](#przep%C5%82yw-danych-architektura)
-- [Komponenty rozwiązania](#komponenty-rozwi%C4%85zania)
-- [Możliwości rozwoju](#mo%C5%BCliwo%C5%9Bci-rozwoju)
+- [Przepływ danych (architektura)](#przepływ-danych-architektura)
+- [Komponenty rozwiązania](#komponenty-rozwiązania)
+- [Możliwości rozwoju](#możliwości-rozwoju)
 
 ## O projekcie
 
