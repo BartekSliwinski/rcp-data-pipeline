@@ -19,7 +19,7 @@ Program pozwala dostosować parametry symulacji do różnych scenariuszy testowy
 
 System Rejestracji Czasu Pracy (RCP) to system służący do ewidencjonowania czasu pracy pracowników poprzez rejestrowanie zdarzeń wejścia i wyjścia z wykorzystaniem urządzeń rejestrujących. Dane pochodzące z takich systemów mogą być wykorzystywane między innymi do rozliczania czasu pracy, obecności oraz nadgodzin.
 
-Generator został stworzony jako część większego projektu poświęconego transformacji danych pomiędzy systemami RCP. Więcej informacji o całym projekcie znajduje się w głównym repozytorium [Transformacja danych pomiędzy systemami RCP](https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP).
+Generator został stworzony jako część większego projektu poświęconego transformacji danych pomiędzy systemami RCP. Więcej informacji o całym projekcie znajduje się w głównym repozytorium [Transformacja danych pomiędzy systemami RCP](https://github.com/BartekSliwinski/rcp-data-pipeline).
 
 Celem generatora jest przygotowanie syntetycznych, lecz realistycznych zbiorów danych testowych w formie plików **CSV**, które mogą zostać wykorzystane podczas projektowania, testowania oraz rozwijania procesów przetwarzania danych.
 
@@ -220,8 +220,8 @@ Poniższe kroki pozwalają uruchomić generator lokalnie. Przed rozpoczęciem pr
 1. Sklonuj repozytorium GitHub:
 
     ```bash
-    git clone https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP.git
-    cd Transformacja_danych_pomiedzy_systemami_RCP/generator
+    git clone https://github.com/BartekSliwinski/rcp-data-pipeline.git
+    cd rcp-data-pipeline/generator
     ```
 
 2. Utwórz środowisko wirtualne:
