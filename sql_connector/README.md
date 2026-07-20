@@ -18,7 +18,7 @@ Moduł odpowiada za przygotowanie wymaganej struktury tabel, zachowanie zależno
 
 System Rejestracji Czasu Pracy (RCP) to system służący do ewidencjonowania czasu pracy pracowników poprzez rejestrowanie zdarzeń wejścia i wyjścia z wykorzystaniem urządzeń rejestrujących. Dane pochodzące z takich systemów mogą być wykorzystywane między innymi do rozliczania czasu pracy, obecności oraz nadgodzin.
 
-Konektor został stworzony jako część większego projektu poświęconego transformacji danych pomiędzy systemami RCP. Więcej informacji o całym projekcie znajduje się w głównym repozytorium: [Transformacja danych pomiędzy systemami RCP](https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP).
+Konektor został stworzony jako część większego projektu poświęconego transformacji danych pomiędzy systemami RCP. Więcej informacji o całym projekcie znajduje się w głównym repozytorium: [Transformacja danych pomiędzy systemami RCP](https://github.com/BartekSliwinski/rcp-data-pipeline).
 
 Celem konektora jest automatyczne przygotowanie struktury relacyjnej bazy danych MS SQL Server oraz zaimportowanie do niej danych zapisanych w plikach CSV. Podczas wykonywania operacji moduł tworzy wymagane tabele, zachowuje relacje pomiędzy nimi oraz umożliwia dwa tryby ładowania danych: dopisywanie rekordów lub całkowite zastąpienie istniejącej zawartości bazy.
 
@@ -156,8 +156,8 @@ Podczas pierwszego uruchomienia konektor automatycznie utworzy wymagane tabele o
 1. Sklonuj repozytorium:
 
     ```bash
-    git clone https://github.com/BartekSliwinski/Transformacja_danych_pomiedzy_systemami_RCP.git
-    cd Transformacja_danych_pomiedzy_systemami_RCP/sql_connector
+    git clone https://github.com/BartekSliwinski/rcp-data-pipeline.git
+    cd rcp-data-pipeline/sql_connector
     ```
 
 2. Utwórz środowisko wirtualne:
