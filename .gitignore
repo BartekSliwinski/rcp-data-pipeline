@@ -3,4 +3,4 @@ __pycache__/
 *.pyc
 output/
 .vscode/
-execution_history.csv
+generator/reports/execution_history.csv
